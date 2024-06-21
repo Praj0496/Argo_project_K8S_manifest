@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-argo-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Praj0496/Argo_project_K8S_manifest.git
+    targetRevision: HEAD
+    path: 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
+
+    automated:
+      selfHeal: true       #prevent manual changes
+      prune: true          #deleting the source files, deleted the K8S resources also
