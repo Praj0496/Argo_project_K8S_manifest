@@ -1,4 +1,4 @@
-apiVersion: apps/v3
+apiVersion: apps/v10
 kind: Deployment
 metadata:
   name: app-deployment
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: praj0404/argo_cd:3
+        image: praj0404/argo_cd:10
         ports:
         - containerPort: 80
