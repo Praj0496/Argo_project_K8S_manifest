@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: praj0404/argo_cd:24
+        image: praj0404/argo_cd:25
         ports:
         - containerPort: 80
